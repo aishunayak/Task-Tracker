@@ -1,0 +1,233 @@
+@charset "ISO-8859-1";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e8f4f8;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Left Section - Fixed (Same as Login) */
+
+.left {
+    flex: 1;
+    width: 50%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: 	#1f4d52;
+}
+.left p {
+    font-size: 1.3rem;
+    color: 	#1f4d52;
+    text-align: center;
+    width: 80%;
+}
+
+/* Right Section - Scrollable (Same as Login) */
+.right {
+    flex: 1;
+    background: #e8f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.registration-box {
+  margin top:10px;
+  background: white;
+ border-radius: 30px;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.registration-box h2 {
+    color: #1f4d52;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.registration-box > p {
+    color: #6a7a8a;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Form Section Title */
+.form-section-title {
+    color: #1f4d52;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d0dce3;
+}
+
+.form-section-title:first-of-type {
+    margin-top: 10px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.input-label {
+    display: block;
+    color: #1f4d52;
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 7px;
+      border: 2px solid #a7d9de;
+       background: #DFF1F3;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #2d7a8e;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(45, 122, 142, 0.1);
+}
+
+.register-btn {
+    width: 100%;
+    padding: 13px;
+    background: #2d7a8e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #235a6a;
+    box-shadow: 0 4px 12px rgba(45, 122, 142, 0.3);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #6a7a8a;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #2d7a8e;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.login-link:hover {
+    color: #235a6a;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 8%;
+    transform: translateX(-50%);
+    color: #7a9aaa;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* Messages */
+.error-message {
+    background: #ffe8e8;
+    color: #c62828;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    border-left: 4px solid #c62828;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    border-left: 4px solid #2e7d32;
+}
+
+/* Responsive Design - Only for Mobile */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .left img {
+        width: 180px;
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+
+    .right {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .registration-box {
+        padding: 10px;
+        max-width: 100%;
+    }
+}
