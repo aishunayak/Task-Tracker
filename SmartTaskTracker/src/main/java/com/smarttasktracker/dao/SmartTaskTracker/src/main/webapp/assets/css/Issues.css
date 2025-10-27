@@ -1,0 +1,921 @@
+/* ===============================================
+   ISSUES PAGE - COMPLETE CSS
+   =============================================== */
+
+/* Issues Content Area */
+.issues-content {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #6a7a8a;
+}
+
+.breadcrumb a {
+    color: #2d7a8e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #235a6a;
+}
+
+/* Alerts */
+.alert {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert i {
+    font-size: 18px;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.alert-error {
+    background: #ffe8e8;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+/* Issue Tabs */
+.issue-tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e8ecef;
+    overflow-x: auto;
+}
+
+.issue-tab {
+    padding: 10px 18px;
+    font-size: 14px;
+    color: #6a7a8a;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.issue-tab:hover {
+    background: #f8fafb;
+    color: #2d3e50;
+}
+
+.issue-tab.active {
+    background: #e8f4f7;
+    color: #2d7a8e;
+    border-bottom: 3px solid #2d7a8e;
+}
+
+/* Issue Table */
+.issue-table-container {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8ecef;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.issue-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.issue-table thead {
+    background: linear-gradient(to bottom, #f8fafb, #f0f4f5);
+}
+
+.issue-table th {
+    padding: 15px 18px;
+    text-align: left;
+    font-size: 13px;
+    color: #6a7a8a;
+    font-weight: 600;
+    border-bottom: 2px solid #e8ecef;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.issue-table td {
+    padding: 18px;
+    font-size: 14px;
+    color: #2d3e50;
+    border-bottom: 1px solid #f8fafb;
+}
+
+.issue-table tbody tr {
+    transition: all 0.2s;
+}
+
+.issue-table tbody tr:hover {
+    background: #f8fafb;
+    transform: scale(1.002);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.issue-name-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.issue-name-link {
+    color: #2d7a8e;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.issue-name-link:hover {
+    color: #235a6a;
+    transform: translateX(3px);
+}
+
+.issue-icon {
+    color: #f57c00;
+    font-size: 16px;
+}
+
+.task-reference {
+    font-size: 12px;
+    color: #6a7a8a;
+    font-style: italic;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-reference::before {
+    content: "→";
+    color: #2d7a8e;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-open {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-close {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-ignore {
+    background: #f5f5f5;
+    color: #757575;
+}
+
+/* Priority Badges */
+.priority-badge {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.priority-low {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.priority-medium {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.priority-high {
+    background: #ffe8e8;
+    color: #c62828;
+}
+
+/* Completion/Close Toggle Switch */
+.completion-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.completion-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.completion-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.completion-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.completion-switch input:checked + .slider {
+    background-color: #4caf50;
+}
+
+.completion-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.completion-switch input:disabled + .slider {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.completion-switch .slider.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Closed Issue Styling */
+.closed-issue {
+    background: #f5f9f5;
+    opacity: 0.85;
+}
+
+.closed-issue .issue-name-link,
+.closed-issue .task-name-link {
+    text-decoration: line-through;
+    color: #6a7a8a;
+}
+
+.closed-issue .btn-edit,
+.closed-issue .btn-delete {
+    display: none !important;
+}
+
+/* Closed Badge */
+.closed-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.closed-badge i {
+    font-size: 11px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f8fafb;
+    color: #6a7a8a;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-action.btn-view:hover {
+    background: #1976d2;
+    color: white;
+}
+
+.btn-action.btn-edit:hover {
+    background: #2d7a8e;
+    color: white;
+}
+
+.btn-action.btn-delete:hover {
+    background: #c62828;
+    color: white;
+}
+
+/* Empty State */
+.no-issues {
+    padding: 60px 20px !important;
+    text-align: center;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.empty-state i {
+    font-size: 64px;
+    color: #d0d8d4;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.empty-state p {
+    font-size: 18px;
+    color: #6a7a8a;
+    font-weight: 500;
+}
+
+.empty-state small {
+    font-size: 14px;
+    color: #a0aca6;
+}
+
+/* ===============================================
+   MODALS
+   =============================================== */
+
+/* Base Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Base Modal Box */
+.modal-box {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f8fafb;
+    color: #6a7a8a;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    background: #c62828;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Completion Modal - Task/Issue Close Style */
+.completion-modal {
+    max-width: 450px;
+    padding: 40px 35px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.completion-modal-content {
+    padding: 0;
+}
+
+.completion-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #d4f4dd 0%, #c8f0d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.completion-icon i {
+    font-size: 50px;
+    color: #4caf50;
+}
+
+.completion-modal-content h2 {
+    font-size: 26px;
+    color: #2d3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.completion-modal-content p {
+    font-size: 16px;
+    color: #6a7a8a;
+    margin-bottom: 30px;
+}
+
+/* Completion Modal Actions */
+.completion-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-no,
+.btn-yes {
+    flex: 1;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-no {
+    background: #e8ecef;
+    color: #5a6c7d;
+}
+
+.btn-no:hover {
+    background: #d8dde0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yes {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-yes:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+}
+
+/* Modal Close Button Override for Completion Modal */
+.completion-modal .modal-close {
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    background: transparent;
+    color: #9aa5b1;
+}
+
+.completion-modal .modal-close:hover {
+    background: #f0f4f5;
+    color: #2d3e50;
+    transform: rotate(0deg);
+}
+
+/* Delete Confirmation Modal */
+.delete-confirm-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.delete-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #ffe8e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-icon i {
+    font-size: 40px;
+    color: #c62828;
+}
+
+.delete-confirm-content h2 {
+    color: #2d3e50;
+    margin-bottom: 10px;
+}
+
+.delete-confirm-content p {
+    color: #6a7a8a;
+    margin-bottom: 10px;
+}
+
+.delete-confirm-content .warning-text {
+    color: #c62828;
+    font-weight: 600;
+}
+
+.btn-delete-confirm {
+    flex: 1;
+    padding: 12px 30px;
+    background: #c62828;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete-confirm:hover {
+    background: #a52222;
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Issue Details Modal */
+.task-details-content {
+    padding: 20px 0;
+}
+
+.detail-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f8fafb;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-group {
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 13px;
+    color: #6a7a8a;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 15px;
+    color: #2d3e50;
+    line-height: 1.6;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e8ecef;
+}
+
+.btn-secondary,
+.btn-cancel {
+    flex: 1;
+    padding: 12px 30px;
+    background: #e8ecef;
+    color: #6a7a8a;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover,
+.btn-cancel:hover {
+    background: #d8dde0;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar Styling */
+.modal-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-box::-webkit-scrollbar-track {
+    background: #f8fafb;
+    border-radius: 4px;
+}
+
+.modal-box::-webkit-scrollbar-thumb {
+    background: #d0d8d4;
+    border-radius: 4px;
+}
+
+.modal-box::-webkit-scrollbar-thumb:hover {
+    background: #2d7a8e;
+}
+
+/* ============================================
+   COMPLETION MODAL - MATCHING TASK DESIGN
+   ============================================ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-box {
+    background: white;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Completion Modal Specific */
+.completion-modal {
+    max-width: 450px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #9aa5b1;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: #f0f4f5;
+    color: #2d3e50;
+    border-radius: 50%;
+}
+
+/* Completion Icon - Green Circle with Checkmark */
+.completion-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #d4f4dd 0%, #c8f0d4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.completion-icon i {
+    font-size: 50px;
+    color: #4caf50;
+}
+
+/* Modal Content Text */
+.completion-modal-content {
+    padding: 0;
+}
+
+.completion-modal-content h2 {
+    font-size: 26px;
+    color: #2d3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.completion-modal-content p {
+    font-size: 16px;
+    color: #6a7a8a;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Modal Action Buttons */
+.completion-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.btn-no,
+.btn-yes {
+    flex: 1;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.3px;
+}
+
+.btn-no {
+    background: #e8ecef;
+    color: #5a6c7d;
+}
+
+.btn-no:hover {
+    background: #d8dde0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yes {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-yes:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+}
+
+.btn-yes:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .completion-modal {
+        padding: 30px 20px;
+    }
+
+    .completion-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .completion-icon i {
+        font-size: 40px;
+    }
+
+    .completion-modal-content h2 {
+        font-size: 22px;
+    }
+
+    .completion-modal-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #DFF1F3;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+.left {
+    width: 50%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: 	#1f4d52;
+}
+.left p {
+    font-size: 1.3rem;
+    color: 	#1f4d52;
+    text-align: center;
+    width: 80%;
+}
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 9px rgba(124,198,160,0.17);
+    padding: 44px 32px 32px 32px;
+    min-width: 365px;
+    max-width: 430px;
+}
+.login-box h2 {
+    font-size: 1.65rem;
+    margin-bottom: 11px;
+    font-weight: bold;
+    color: #1f4d52;
+}
+.login-box p {
+    margin: 0 0 19px 0;
+    color: #1f4d52;
+}
+
+
+.input-label {
+    font-weight: 500;
+    color: #1f4d52;
+    font-size: 1.03em;
+}
+.input-field {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 7px;
+    border: 2px solid #a7d9de;
+    background: #DFF1F3;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    outline: none;
+    font-size: 1em;
+}
+.input-field:focus {
+    border-color: #a7d9de;
+    background: #fff;
+}
+.continue-btn {
+    width: 100%;
+    padding: 13px 0;
+    border-radius: 7px;
+    border: none;
+    background: #DFF1F3;
+    color: #1f4d52;
+    font-size: 1.13em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.22s;
+}
+.continue-btn:hover {
+    background: #a7d9de;
+}
+.footer {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95em;
+    color: #88ae9d;
+    padding: 0px;
+}
+@media screen and (max-width: 900px) {
+    .container { flex-direction: column; }
+    .left, .right { width: 100%; }
+    .left { order: 2; }
+    .footer { position: static; padding: 8px; }
+}
+
+.form-footer {
+  color:#7a9aaa;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 15px;
+}
